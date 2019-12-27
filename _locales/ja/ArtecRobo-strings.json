@@ -3,4 +3,5 @@
   ,"DCmotion.Off|block": "Off"
   ,"connectorDCMotor.P0|block": "P0"
   ,"connectorDCMotor.P1|block": "P1"
+  ,"connectorDCMotor.P2|block": "P2"
 }

@@ -9,10 +9,12 @@ enum DCmotion {
 }
 
 enum connectorDCMotor {
-	//% block="M1"
+	//% block="P0"
 	P0,
-	//% block="M2"
-	P1
+	//% block="P1"
+	P1,
+	//% block="P2"
+	P2
 }
 
 
@@ -32,21 +34,13 @@ namespace artecrobo {
 	export function moveDCMotor(_connector: connectorDCMotor, _motion: DCmotion): void {
 		switch(_motion) {
 			case DCmotion.On:
-				/*
-					Move On
-					M1:P8 = speed, P12 = 0
-					M2:P0 = speed, P16 = 0
-				*/
+				
 				pins.digitalWritePin(DigitalPin._connector, 1);
 
 				
 				break;
 			case DCmotion.Off:
-				/*
-					Move Off
-					M1:P8 = 0, P12 = speeed
-					M2:P0 = 0, P16 = speeed
-				*/
+				
 				pins.digitalWritePin(DigitalPin._connector, 0);
 				break;
 		}
